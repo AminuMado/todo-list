@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+
+}
+body {
+	display: grid;
+	grid-template-areas: "header header" "aside  main" "footer  footer";
+	grid-template-rows: 70px 2fr 50px;
+	grid-template-columns: 350px 1fr;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Layout */
+#header{
+    grid-area: header;
+    background-color: aqua;
+}
+#aside{
+    grid-area: aside;
+    background-color: yellow;
+}
+#main{
+    grid-area: main;
+    background-color: thistle;
+}
+#footer{
+    grid-area: footer;
+    background-color: violet;
+}
