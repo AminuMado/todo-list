@@ -6,7 +6,7 @@ body {
 	display: grid;
 	grid-template-areas: "header header" "aside  main" "footer footer";
 	grid-template-rows: 70px 2fr 50px;
-	grid-template-columns: 350px 1fr;
+	grid-template-columns: 250px 1fr;
 	width: 100vw;
 	height: 100vh;
 }
@@ -56,14 +56,39 @@ body {
     transform: rotate(-45deg) translate(35px,35px) ;
 }
 /* Layout */
-#header{
-    grid-area: header;
-    background-color: aqua;
+#header {
+	grid-area: header;
+	display: flex;
+    background-color: #121420;
+    color: #64B6AC;
+	align-items: center;
+	gap: 80px;
 }
-#aside{
-    grid-area: aside;
-    background-color: yellow;
+/* Aside Section */
+#aside {
+	grid-area: aside;
+	background-color: yellow;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 50px 25px;
 }
+.project-categories {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.project-categories > a{
+    text-decoration: none;
+    color: inherit;
+}
+.divider {
+	height: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: hsla(0,0%,100%,.4);
+}
+
 #main{
     grid-area: main;
     background-color: thistle;
