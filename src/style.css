@@ -82,6 +82,9 @@ body {
     text-decoration: none;
     color: inherit;
 }
+.project-categories > a:hover{
+    color: lavender;
+}
 .divider {
 	height: 1px;
 	margin-top: 20px;
