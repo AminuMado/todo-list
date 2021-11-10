@@ -21,10 +21,15 @@
   "homepage": "https://github.com/AminuMado/todo-list#readme",
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
