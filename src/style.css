@@ -71,7 +71,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	padding: 50px 25px;
+	padding: 20px 10px 10px 15px;
+    overflow: auto;
 }
 .project-categories {
 	display: flex;
@@ -86,12 +87,52 @@ body {
     color: lavender;
 }
 .divider {
-	height: 1px;
-	margin-top: 20px;
+	height: 2px;
+	margin-top: 10px;
 	margin-bottom: 20px;
-	background-color: hsla(0,0%,100%,.4);
+	background-color:black;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    
+}
+.project-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-item > p:hover{
+    color: silver;
+    cursor: pointer;
+}
+.project-item > img {
+	width: 25px;
+    filter: invert(80%) sepia(3%) saturate(1235%) hue-rotate(22deg) brightness(20%) contrast(74%);
+}
+.project-item > img:hover {
+    filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all .3s ease;
+    
+}
+#add-project-container{
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    margin-top: 25px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
+#add-project-container:hover #plus-icon{
+transform: rotate(180deg) scale(1.2);
+transition: all 0.6s ease;
+color: red;
+}
 #main{
     grid-area: main;
     background-color: thistle;
