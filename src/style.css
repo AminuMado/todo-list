@@ -214,13 +214,11 @@ color: red;
     display: flex;
     gap: 10px;
     align-items: center;
-    display: none;
 }
 .right-to-do{
     display: flex;
     align-items: center;
     gap: 10px;
-    display: none;
 }
 .task-edit,
 .task-delete{
@@ -236,11 +234,17 @@ color: red;
 }
 .left-to-do-edit{
     display: flex;
+    width: 50%;
+    display: none;
+}
+.left-to-do-edit > input{
+    width: 100%;
 }
 .right-to-do-edit{
     display: flex;
     align-items: center;
     gap: 10px;
+    display: none;
 }
 .edit-to-do-button-container{
     display: flex;
