@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
 }
@@ -114,8 +115,8 @@ body {
 .project-item > img:hover {
     filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
     cursor: pointer;
-    transform: scale(1.01);
-    transition: all .3s ease;
+    transform: scale(1.2);
+    transition: all .1s ease;
     
 }
 #add-project-container{
@@ -143,7 +144,6 @@ color: red;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    display: none;
 }
 #project-info{
     display: flex;
@@ -157,14 +157,15 @@ color: red;
 #edit-icon:hover {
     filter: invert(66%) sepia(91%) saturate(5686%) hue-rotate(75deg) brightness(101%) contrast(101%);
     cursor: pointer;
-    transform: scale(1.1);
-    transition: all .3s ease;
+    transform: scale(1.2);
+    transition: all .1s ease;
     
 }
 #edit-project-info-container{
     display: flex;
     flex-direction: column;
     gap: 3px;
+    display: none;
 }
 #edit-project-name,
 #edit-project-description{
@@ -196,6 +197,67 @@ color: red;
 #edit-project-cancel-button:hover{
     border: 2px solid black;
 }
+#tasks-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.to-do{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 0.3em;
+}
+.left-to-do{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.right-to-do{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.task-edit,
+.task-delete{
+    width: 25px;
+}
+.task-edit:hover{
+    transform: scale(1.2);
+    filter: invert(66%) sepia(91%) saturate(5686%) hue-rotate(75deg) brightness(101%) contrast(101%);
+}
+.task-delete:hover{
+    transform: scale(1.2);
+    filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
+}
+.left-to-do-edit,
+.right-to-do-edit{
+    display: none;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid hsla(0,0%,100%,.4);
+	cursor: pointer;
+}
+.checkbox > img {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+    opacity: 0;
+}
+.checkbox > img.checked {
+	background-color: #7af76e;
+    opacity: 1;
+    transition: all 3s ease-in-out;
+}
+
 #footer{
     grid-area: footer;
     display: flex;
