@@ -127,9 +127,8 @@ body {
     font-size: 12px;
     cursor: pointer;
 }
-
 #add-project-container:hover #plus-icon{
-transform: rotate(180deg) scale(1.2);
+transform: rotate(180deg) scale(1.5);
 transition: all 0.6s ease;
 color: red;
 }
@@ -298,7 +297,73 @@ color: red;
     opacity: 1;
     transition: all 3s ease-in-out;
 }
-
+.to-do-add{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;
+    padding: 5px;
+    border-radius: 0.3em;
+    display: none;
+}
+#add-task-container{
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    margin-top: 25px;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+#add-task-container:hover #plus-icon{
+    transform: rotate(180deg) scale(1.5);
+    transition: all 0.6s ease;
+    color: red;
+}
+.left-to-do-add{
+    display: flex;
+    width: 50%;
+}
+.left-to-do-add > input{
+    width: 100%;
+}
+.right-to-do-add{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.add-to-do-button-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.add-to-do-submit-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #00cd00;
+    border: 2px solid #00cd00;
+}
+.add-to-do-cancel-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ff2d4a;
+    border: 2px solid #ff2d4a;
+}
+.add-to-do-submit-button:hover,
+.add-to-do-cancel-button:hover{
+    border: 2px solid black;
+}
+.add-to-do-submit-button:active,
+.add-to-do-cancel-button:active{
+    transform: scale(1.01);
+}
+    
 #footer{
     grid-area: footer;
     display: flex;
