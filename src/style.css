@@ -136,6 +136,30 @@ color: red;
 #main{
     grid-area: main;
     background-color: thistle;
+    padding: 10px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+#project-info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+#project-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#edit-icon{
+    width: 25px;
+    cursor: pointer;
+}
+#edit-icon:hover {
+    filter: invert(66%) sepia(91%) saturate(5686%) hue-rotate(75deg) brightness(101%) contrast(101%);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all .3s ease;
+    
 }
 #footer{
     grid-area: footer;
@@ -147,7 +171,6 @@ color: red;
     padding: 10px;
     font-size: 20px;
     margin-top: auto;
-    background-color:wheat;
 }
 .github-logo{
     width: 20px;
