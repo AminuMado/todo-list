@@ -214,11 +214,13 @@ color: red;
     display: flex;
     gap: 10px;
     align-items: center;
+    display: none;
 }
 .right-to-do{
     display: flex;
     align-items: center;
     gap: 10px;
+    display: none;
 }
 .task-edit,
 .task-delete{
@@ -232,9 +234,44 @@ color: red;
     transform: scale(1.2);
     filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
 }
-.left-to-do-edit,
+.left-to-do-edit{
+    display: flex;
+}
 .right-to-do-edit{
-    display: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.edit-to-do-button-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.edit-to-do-submit-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #00cd00;
+    border: 2px solid #00cd00;
+}
+.edit-to-do-cancel-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ff2d4a;
+    border: 2px solid #ff2d4a;
+}
+.edit-to-do-submit-button:hover,
+.edit-to-do-cancel-button:hover{
+    border: 2px solid black;
+}
+.edit-to-do-submit-button:active,
+.edit-to-do-cancel-button:active{
+    transform: scale(1.01);
 }
 .checkbox {
     display: flex;
