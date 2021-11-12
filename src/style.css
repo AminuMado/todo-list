@@ -209,6 +209,11 @@ color: red;
     padding: 5px;
     border-radius: 0.3em;
 }
+.to-do:hover{
+    box-shadow: -1px 1px 0px 0px black;
+    transform: translate(3px,-3px);
+  
+  }
 .left-to-do{
     display: flex;
     gap: 10px;
