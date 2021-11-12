@@ -126,6 +126,7 @@ body {
     border: 2px solid;
     padding: 5px;
     margin-top: 10px;
+    display: none;
 }
 #add-project-button-container{
     display: flex;
