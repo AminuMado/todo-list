@@ -119,6 +119,44 @@ body {
     transition: all .1s ease;
     
 }
+#add-project-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 2px solid;
+    padding: 5px;
+    margin-top: 10px;
+}
+#add-project-button-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+#add-project-submit-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #00cd00;
+    border: 2px solid #00cd00;
+}
+#add-project-cancel-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ff2d4a;
+    border: 2px solid #ff2d4a;
+}
+#add-project-submit-button:hover,
+#add-project-cancel-button:hover{
+    border: 2px solid black;
+}
+#add-project-submit-button:active,
+#add-project-cancel-button:active{
+    transform: scale(1.01);
+}
 #add-project-container{
     display: flex;
     justify-content: end;
