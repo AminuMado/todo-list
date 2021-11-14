@@ -34,16 +34,16 @@
                     <img src="./assets/img/delete.svg" alt="delete">
                 </div>   
             </div>
-            <div id="add-project-modal" class="hide">
-                <label class="add-project-label" for="project-name">Project Name</label>
-                <input class="add-project-input" id="project-name" type="text" placeholder="Name of Project/Task"> 
-                <label class="add-project-label" for="project-description">Project Description</label> 
-                <textarea class="add-project-input" id="project-description" type="text" placeholder="Description of Project/Task"></textarea>
+            <form id="add-project-modal" class="hide" onsubmit="return false">
+                <label class="add-project-label" for="project-name-input">Project Name</label>
+                <input class="add-project-input" id="project-name-input" type="text" placeholder="Name of Project/Task" required> 
+                <label class="add-project-label" for="project-description-input">Project Description</label> 
+                <textarea class="add-project-input" id="project-description-input" type="text" placeholder="Description of Project/Task"></textarea>
                 <div id="add-project-button-container">
-                    <p id="add-project-submit-button">Submit</p>
-                    <p id="add-project-cancel-button">Cancel</p>
+                    <button id="add-project-submit-button">Submit</button>
+                    <button id="add-project-cancel-button">Cancel</button>
                 </div>
-            </div>
+            </form>
             <div id="add-project-container">
                 <div id="add-project">
                     <span id="plus-icon">+</span>
@@ -55,7 +55,7 @@
     <main id="main">
         <div id="project-info-container">
             <div id="project-info">
-                <h2 id="project-name">Example Project 1</h2>
+                <h2 id="project-name">Example Pr-inputoject 1</h2>
                 <h4 id="project-description">An Example Project</h4>
             </div>
             <div id="edit-project-info-icon">
