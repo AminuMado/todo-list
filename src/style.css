@@ -187,31 +187,37 @@ color: red;
     display: flex;
     flex-direction: column;
 }
-#project-info-container{
+.project-info-container{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+}
+.project-info-container.hide{
+    display: none;
 }
 #project-info{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-#edit-icon{
+#project-edit-icon{
     width: 25px;
     cursor: pointer;
 }
-#edit-icon:hover {
+#project-edit-icon:hover {
     filter: invert(66%) sepia(91%) saturate(5686%) hue-rotate(75deg) brightness(101%) contrast(101%);
     cursor: pointer;
     transform: scale(1.2);
     transition: all .1s ease;
     
 }
-#edit-project-info-container{
+.edit-project-info-container{
     display: flex;
     flex-direction: column;
     gap: 3px;
+    
+}
+.edit-project-info-container.hide{
     display: none;
 }
 #edit-project-name,
