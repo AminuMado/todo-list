@@ -3,7 +3,7 @@ import todoList from ".";
 import render from "./render";
 
 const events = (() => {
-    const aside = document.getElementById('aside')
+    const aside = document.getElementById('aside');
     const addProject = document.getElementById('add-project');
     const addProjectContainer = document.getElementById('add-project-container');
     const addProjectModal = document.getElementById('add-project-modal');
@@ -42,7 +42,20 @@ const events = (() => {
     })
   
 })()
+const main = document.getElementById("main");
+const projectInfoContainer = document.getElementById("project-info-container");
+const editProjectInfoContainer = document.getElementById("edit-project-info-container");
 
+main.addEventListener("click",(e) => {
+    if(e.target.id == "project-edit-icon"){
+        projectInfoContainer.classList.add("hide");
+        editProjectInfoContainer.classList.remove("hide");
+    }
+    if(e.target.id == 'edit-project-cancel-button'){
+        editProjectInfoContainer.classList.add("hide");
+        projectInfoContainer.classList.remove("hide");
+    }
+})
 
 
 export default events

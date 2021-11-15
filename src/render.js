@@ -42,7 +42,7 @@ const render = (() =>{
         editContainer.setAttribute("id","edit-project-info-icon")
         editContainer.classList.add("edit-project-info-icon")
         const editIcon = document.createElement("img");
-        editIcon.setAttribute("id","edit-icon")
+        editIcon.setAttribute("id","project-edit-icon")
         editIcon.src = penIcon;
        
         projectInfoContainer.appendChild(projectInfo);
