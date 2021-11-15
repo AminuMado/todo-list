@@ -24,17 +24,17 @@
         <div id="project-panel">
             <h3 id="project-header">Projects</h3>
             <div class="divider"></div>
-            <div class="project-container">
-                <div class = 'project-item' data-id = "0">
+            <div  id ="project-container" class="project-container">
+                <!-- <div class = 'project-item' data-id = "0">
                     <p>Example Project 1</p>
                     <img src="./assets/img/delete.svg" alt="delete">
                 </div>
                 <div class = 'project-item' data-id = "1">
                     <p>Example Project 2</p>
                     <img src="./assets/img/delete.svg" alt="delete">
-                </div>   
+                </div>    -->
             </div>
-            <form id="add-project-modal" class="hide" onsubmit="return false">
+            <div id="add-project-modal" class="hide" onsubmit="return false">
                 <label class="add-project-label" for="project-name-input">Project Name</label>
                 <input class="add-project-input" id="project-name-input" type="text" placeholder="Name of Project/Task" required> 
                 <label class="add-project-label" for="project-description-input">Project Description</label> 
@@ -43,7 +43,7 @@
                     <button id="add-project-submit-button">Submit</button>
                     <button id="add-project-cancel-button">Cancel</button>
                 </div>
-            </form>
+            </div>
             <div id="add-project-container">
                 <div id="add-project">
                     <span id="plus-icon">+</span>
@@ -53,16 +53,16 @@
         </div>
     </aside>
     <main id="main">
-        <div id="project-info-container">
-            <div id="project-info">
-                <h2 id="project-name">Example Pr-inputoject 1</h2>
+        <div id="project-info-container" class="project-info-container">
+            <div id="project-info" class="project-info">
+                <h2 id="project-name">Example Project</h2>
                 <h4 id="project-description">An Example Project</h4>
             </div>
             <div id="edit-project-info-icon">
                 <img src="./assets/img/edit.svg" alt="edit" id="edit-icon">
             </div>
         </div>
-        <div id="edit-project-info-container">
+        <div id="edit-project-info-container" class="edit-project-info-container">
             <input class="edit-project-details" id="edit-project-name" type="text" placeholder="Name of Project"> 
             <input class="edit-project-details" id="edit-project-description" type="text" placeholder="Description of Project" >
             <div id="edit-project-button-container">
