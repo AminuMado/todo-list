@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
-#add-project-submit-button{
+.add-project-submit-button{
     font-family: sf-bold;
     color: #eff1ed;
     padding: 2px;
@@ -144,7 +144,7 @@ body {
     background-color: #00cd00;
     border: 2px solid #00cd00;
 }
-#add-project-cancel-button{
+.add-project-cancel-button{
     font-family: sf-bold;
     color: #eff1ed;
     padding: 2px;
@@ -153,15 +153,15 @@ body {
     background-color: #ff2d4a;
     border: 2px solid #ff2d4a;
 }
-#add-project-submit-button:hover,
-#add-project-cancel-button:hover{
+.add-project-submit-button:hover,
+.add-project-cancel-button:hover{
     border: 2px solid black;
 }
-#add-project-submit-button:active,
-#add-project-cancel-button:active{
+.add-project-submit-button:active,
+.add-project-cancel-button:active{
     transform: scale(1.01);
 }
-#add-project-container{
+.add-project-container{
     display: flex;
     justify-content: end;
     align-content: center;
@@ -169,10 +169,10 @@ body {
     font-size: 12px;
     cursor: pointer;
 }
-#add-project-container.hide{
+.add-project-container.hide{
     display: none;
 }
-#add-project{
+.add-project-button{
     display: flex;
 }
 #add-project:hover #plus-icon{
