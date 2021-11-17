@@ -358,22 +358,67 @@ color: red;
     opacity: 1;
     transition: all 3s ease-in-out;
 }
-.to-do-add{
+.add-task-modal{
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 2px solid;
     padding: 5px;
     border-radius: 0.3em;
+}
+.add-task-modal.hide{
     display: none;
 }
+.add-task-left{
+    display: flex;
+    width: 50%;
+}
+.add-task-left > input{
+    width: 100%;
+}
+.add-task-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.add-task-button-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.add-task-submit-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #00cd00;
+    border: 2px solid #00cd00;
+}
+.add-task-cancel-button{
+    font-family: sf-bold;
+    color: #eff1ed;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ff2d4a;
+    border: 2px solid #ff2d4a;
+}
+.add-task-submit-button:hover,
+.add-task-cancel-button:hover{
+    border: 2px solid black;
+}
+.add-task-submit-button:active,
+.add-task-cancel-button:active{
+    transform: scale(1.01);
+}
+
 .add-task-container{
     display: flex;
     justify-content: end;
     align-content: center;
     margin-top: 25px;
-    font-size: 12px;
-    
+    font-size: 12px; 
 }
 .add-task-container.hide{
     display: none;
@@ -386,49 +431,6 @@ color: red;
     transform: rotate(180deg) scale(1.5);
     transition: all 0.6s ease;
     color: red;
-}
-.left-to-do-add{
-    display: flex;
-    width: 50%;
-}
-.left-to-do-add > input{
-    width: 100%;
-}
-.right-to-do-add{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.add-to-do-button-container{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.add-to-do-submit-button{
-    font-family: sf-bold;
-    color: #eff1ed;
-    padding: 2px;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color: #00cd00;
-    border: 2px solid #00cd00;
-}
-.add-to-do-cancel-button{
-    font-family: sf-bold;
-    color: #eff1ed;
-    padding: 2px;
-    border-radius: 3px;
-    cursor: pointer;
-    background-color: #ff2d4a;
-    border: 2px solid #ff2d4a;
-}
-.add-to-do-submit-button:hover,
-.add-to-do-cancel-button:hover{
-    border: 2px solid black;
-}
-.add-to-do-submit-button:active,
-.add-to-do-cancel-button:active{
-    transform: scale(1.01);
 }
     
 #footer{
