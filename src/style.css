@@ -167,15 +167,17 @@ body {
     align-content: center;
     margin-top: 25px;
     font-size: 12px;
-    cursor: pointer;
+    
 }
 .add-project-container.hide{
     display: none;
+    
 }
 .add-project-button{
     display: flex;
+    cursor: pointer;
 }
-#add-project:hover #plus-icon{
+.add-project-button:hover #plus-icon{
 transform: rotate(180deg) scale(1.5);
 transition: all 0.6s ease;
 color: red;
@@ -220,8 +222,8 @@ color: red;
 .edit-project-info-container.hide{
     display: none;
 }
-#edit-project-name,
-#edit-project-description{
+#edit-project-name-input,
+#edit-project-description-input{
     font-size: 30px;
 }
 #edit-project-submit-button{
@@ -278,15 +280,15 @@ color: red;
     align-items: center;
     gap: 10px;
 }
-.task-edit,
-.task-delete{
+.task-edit-icon,
+.task-delete-icon{
     width: 25px;
 }
-.task-edit:hover{
+.task-edit-icon:hover{
     transform: scale(1.2);
     filter: invert(66%) sepia(91%) saturate(5686%) hue-rotate(75deg) brightness(101%) contrast(101%);
 }
-.task-delete:hover{
+.task-delete-icon:hover{
     transform: scale(1.2);
     filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
 }
@@ -365,16 +367,22 @@ color: red;
     border-radius: 0.3em;
     display: none;
 }
-#add-task-container{
+.add-task-container{
     display: flex;
     justify-content: end;
     align-content: center;
     margin-top: 25px;
     font-size: 12px;
-    cursor: pointer;
     
 }
-#add-task-container:hover #plus-icon{
+.add-task-container.hide{
+    display: none;
+}
+.add-task-button{
+    display: flex;
+    cursor: pointer;
+}
+.add-task-button:hover #plus-icon{
     transform: rotate(180deg) scale(1.5);
     transition: all 0.6s ease;
     color: red;
