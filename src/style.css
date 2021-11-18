@@ -252,12 +252,12 @@ color: red;
 #edit-project-cancel-button:hover{
     border: 2px solid black;
 }
-#tasks-container{
+.tasks-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.to-do{
+.task{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,17 +265,17 @@ color: red;
     padding: 5px;
     border-radius: 0.3em;
 }
-.to-do:hover{
+.task:hover{
     box-shadow: -1px 1px 0px 0px black;
     transform: translate(3px,-3px);
   
   }
-.left-to-do{
+.left-task{
     display: flex;
     gap: 10px;
     align-items: center;
 }
-.right-to-do{
+.right-task{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -292,26 +292,26 @@ color: red;
     transform: scale(1.2);
     filter: invert(33%) sepia(70%) saturate(4784%) hue-rotate(336deg) brightness(90%) contrast(108%);
 }
-.left-to-do-edit{
+.left-task-edit{
     display: flex;
     width: 50%;
     display: none;
 }
-.left-to-do-edit > input{
+.left-task-edit > input{
     width: 100%;
 }
-.right-to-do-edit{
+.right-task-edit{
     display: flex;
     align-items: center;
     gap: 10px;
     display: none;
 }
-.edit-to-do-button-container{
+.edit-task-button-container{
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.edit-to-do-submit-button{
+.edit-task-submit-button{
     font-family: sf-bold;
     color: #eff1ed;
     padding: 2px;
@@ -320,7 +320,7 @@ color: red;
     background-color: #00cd00;
     border: 2px solid #00cd00;
 }
-.edit-to-do-cancel-button{
+.edit-task-cancel-button{
     font-family: sf-bold;
     color: #eff1ed;
     padding: 2px;
@@ -329,32 +329,41 @@ color: red;
     background-color: #ff2d4a;
     border: 2px solid #ff2d4a;
 }
-.edit-to-do-submit-button:hover,
-.edit-to-do-cancel-button:hover{
+.edit-task-submit-button:hover,
+.edit-task-cancel-button:hover{
     border: 2px solid black;
 }
-.edit-to-do-submit-button:active,
-.edit-to-do-cancel-button:active{
+.edit-task-submit-button:active,
+.edit-task-cancel-button:active{
     transform: scale(1.01);
 }
 .checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
-	width: 25px;
-	height: 25px;
+	min-width: 20px;
+	min-height: 20px;
 	border-radius: 50%;
 	border: 1px solid hsla(0,0%,100%,.4);
 	cursor: pointer;
+    transition: all .5s ease;
+}
+.checkbox.checked{
+    background-color: #7af76e;
+    transition: all .5s ease;
 }
 .checkbox > img {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
+	width: 15px;
+	height: 15px;
     opacity: 0;
 }
+
+.checkbox.checked > img{
+transition: all .3s ease-in-out;
+opacity: 1;
+
+}
 .checkbox > img.checked {
-	background-color: #7af76e;
     opacity: 1;
     transition: all 3s ease-in-out;
 }
