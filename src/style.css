@@ -268,7 +268,6 @@ color: red;
 .task:hover{
     box-shadow: -1px 1px 0px 0px black;
     transform: translate(3px,-3px);
-  
   }
 .left-task{
     display: flex;
@@ -295,7 +294,6 @@ color: red;
 .left-task-edit{
     display: flex;
     width: 50%;
-    display: none;
 }
 .left-task-edit > input{
     width: 100%;
@@ -304,7 +302,6 @@ color: red;
     display: flex;
     align-items: center;
     gap: 10px;
-    display: none;
 }
 .edit-task-button-container{
     display: flex;
@@ -336,6 +333,12 @@ color: red;
 .edit-task-submit-button:active,
 .edit-task-cancel-button:active{
     transform: scale(1.01);
+}
+.left-task.hide,
+.left-task-edit.hide,
+.right-task.hide,
+.right-task-edit.hide{
+    display: none;
 }
 .checkbox {
     display: flex;
