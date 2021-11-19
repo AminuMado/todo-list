@@ -35,7 +35,6 @@ const dynamicEvents = (()=>{
             deleteIcon.forEach(deleteBtn => deleteBtn.addEventListener('click', function(e){
                 console.log(e.target.parentNode)
             todo.deleteProject(e.target.parentNode.getAttribute('data-id'));
-            // storeMyProjects();
             }))
     }
     const createTaskBtnListeners = ()=>{
@@ -47,7 +46,6 @@ const dynamicEvents = (()=>{
             else{
                todo.taskCompleted(e.target.parentNode.parentNode.parentNode.getAttribute('data-id'));
             }
-            // storeMyProjects();
             renderTasks.display();
         }));
 
@@ -59,7 +57,6 @@ const dynamicEvents = (()=>{
         let taskDeleteIcon = document.querySelectorAll(".task-delete-icon");
         taskDeleteIcon.forEach(btn => btn.addEventListener('click', function(e){
             todo.deleteTask(e.target.parentNode.parentNode.getAttribute('data-id'));
-            // storeMyProjects();
         }));
     
         let editTaskCancelButton = document.querySelectorAll(".edit-task-cancel-button");
