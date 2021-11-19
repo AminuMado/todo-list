@@ -24,16 +24,7 @@
         <div id="project-panel">
             <h3 id="project-header">Projects</h3>
             <div class="divider"></div>
-            <div  id ="project-container" class="project-container">
-                <!-- <div class = 'project-item' data-id = "0">
-                    <p>Example Project 1</p>
-                    <img src="./assets/img/delete.svg" alt="delete">
-                </div>
-                <div class = 'project-item' data-id = "1">
-                    <p>Example Project 2</p>
-                    <img src="./assets/img/delete.svg" alt="delete">
-                </div>    -->
-            </div>
+            <div  id ="project-container" class="project-container"></div>
             <div id="add-project-modal" class="hide">
                 <label class="add-project-label" for="project-name-input">Project Name</label>
                 <input class="add-project-input" id="project-name-input" type="text" placeholder="Name of Project/Task" required> 
@@ -55,8 +46,8 @@
     <main id="main">
         <div id="project-info-container" class="project-info-container">
             <div id="project-info" class="project-info">
-                <h2 id="project-name">Example Project</h2>
-                <h4 id="project-description">An Example Project</h4>
+                <h2 id="project-name"></h2>
+                <h4 id="project-description"></h4>
             </div>
             <div id="edit-project-info-icon">
                 <img src="./assets/img/edit.svg" alt="edit" id="project-edit-icon">
@@ -71,89 +62,23 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div id="tasks-container" class="tasks-container">
-            <div class="task" data-value="0">
-                <div class="left-task">
-                    <div class="checkbox">
-                        <img src="./assets/img/tick.svg">
-                    </div>
-                    <div class="task-name">Default Task</div>
-                </div>
-                <div class="left-task-edit">
-                    <input class="to-do-name" type="text" placeholder="Task Name">
-                </div>
-                <div class="right-task">
-                    <div class="task-time">10 months ago</div>
-                    <img class="task-edit-icon" src="./assets/img/edit.svg">
-                    <img class="task-delete-icon" src="./assets/img/delete.svg">
-                </div>
-                <div class="right-task-edit">
-                    <input class="task-date" type="date">
-                    <div class="edit-task-button-container">
-                        <p class="edit-task-submit-button">Submit</p>
-                        <p class="edit-task-cancel-button">Cancel</p>
-                    </div>
+        <div id="tasks-container" class="tasks-container"></div>
+        <div id= 'add-task-modal' class="add-task-modal hide">
+            <div class="add-task-left">
+                <input id="add-task-name-input" class="add-task-name-input" type="text" placeholder="Task Name">
+            </div>
+            <div class="add-task-right">
+                <input id="add-task-date-input" class="add-task-date-input" type="date">
+                <div class="add-task-button-container">
+                    <p id="add-task-submit-button" class="add-task-submit-button">Submit</p>
+                    <p id="add-task-cancel-button" class="add-task-cancel-button">Cancel</p>
                 </div>
             </div>
-            <!-- <div class="to-do" data-value="1">
-                <div class="left-to-do">
-                    <div class="checkbox"></div>
-                    <div class="task-name">Default Task 2</div>
-                </div>
-                <div class="left-task-edit">
-                    <input class="to-do-name" type="text" placeholder="To-Do Name">
-                </div>
-                <div class="right-to-do">
-                    <div class="task-time">10 months ago</div>
-                    <img class="task-edit-icon" src="./assets/img/edit.svg">
-                    <img class="task-delete-icon" src="./assets/img/delete.svg">
-                </div>
-                <div class="right-task-edit">
-                    <input class="to-do-date" type="date">
-                    <div class="edit-to-do-button-container">
-                        <p class="edit-to-do-submit-button">Submit</p>
-                        <p class="edit-to-do-cancel-button">Cancel</p>
-                    </div>
-                </div>
-            </div>
-            <div class="to-do" data-value="2">
-                <div class="left-to-do">
-                    <div class="checkbox"></div>
-                    <div class="task-name">Default Task</div>
-                </div>
-                <div class="left-task-edit">
-                    <input class="to-do-name" type="text" placeholder="To-Do Name">
-                </div>
-                <div class="right-to-do">
-                    <div class="task-time">10 months ago</div>
-                    <img class="task-edit" src="./assets/img/edit.svg">
-                    <img class="task-delete" src="./assets/img/delete.svg">
-                </div>
-                <div class="right-task-edit">
-                    <input class="to-do-date" type="date">
-                    <div class="edit-to-do-button-container">
-                        <p class="edit-to-do-submit-button">Submit</p>
-                        <p class="edit-to-do-cancel-button">Cancel</p>
-                    </div>
-                </div> -->
-            </div>
-            <div class="add-task-modal hide">
-                <div class="add-task-left">
-                    <input class="add-task-name" type="text" placeholder="Task Name">
-                </div>
-                <div class="add-task-right">
-                    <input class="add-task-date" type="date">
-                    <div class="add-task-button-container">
-                        <p class="add-task-submit-button">Submit</p>
-                        <p class="add-task-cancel-button">Cancel</p>
-                    </div>
-                </div>
-            </div>
-            <div id="add-task-container" class="add-task-container">
-                <div id="add-task-button" class="add-task-button">
-                    <span id="plus-icon">+</span>
-                    <p id="add-task-text">Add Task</p>
-                </div>
+        </div>
+        <div id="add-task-container" class="add-task-container">
+            <div id="add-task-button" class="add-task-button">
+                <span id="plus-icon">+</span>
+                <p id="add-task-text">Add Task</p>
             </div>
         </div>
     </main>
