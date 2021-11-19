@@ -105,6 +105,9 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+.project-item.active{
+    color: red;
+}
 .project-item:hover{
     color: silver;
     cursor: pointer;
@@ -189,6 +192,7 @@ color: red;
     display: flex;
     flex-direction: column;
 }
+
 .project-info-container{
     display: flex;
     justify-content: space-between;
