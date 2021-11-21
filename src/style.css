@@ -516,4 +516,10 @@ opacity: 1;
         display: block;
         
     }
+    
+}
+@media (max-width: 425px) {
+    .tasks-container {
+        gap: 25px;
+    }
 }
