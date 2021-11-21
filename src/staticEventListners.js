@@ -1,61 +1,40 @@
-import createProject from "./projects";
-import todoList from ".";
-import render from "./render";
+import { newProject, editHeading, newTask} from "./domfunctionality";
 
-const events = (() => {
-    const aside = document.getElementById('aside');
-    const addProject = document.getElementById('add-project');
-    const addProjectContainer = document.getElementById('add-project-container');
-    const addProjectModal = document.getElementById('add-project-modal');
-    const addProjectSubmitButton = document.getElementById('add-project-submit-button');
-    const addProjectCancelButton = document.getElementById('add-project-cancel-button');
-    const addProjectTitle = document.getElementById('project-name-input');
-    const addProjectDescription = document.getElementById('project-description-input');
-    aside.addEventListener('click',(e) =>{
-        console.log(e.target)
-        
-        if(e.target.id == 'add-project-cancel-button'){
-            addProjectContainer.classList.remove('hide');
-            addProjectModal.classList.add('hide');
-        } else if(e.target.id == 'add-project-submit-button'){
-            let projectTitle = addProjectTitle.value;
-            let projectDescription = addProjectDescription.value;
-            if(projectTitle){
-                todoList.push(createProject(projectTitle,projectDescription))
-                console.log(todoList)
-                console.log(todoList[0].getTitle())
-                console.log(todoList[0].getDescription())
-                addProjectContainer.classList.remove('hide');
-                addProjectModal.classList.add('hide');
-                render.displayProject()
-                
-            }
-        } else if(e.target.classList == "project-item"){
-            render.displayProjectInfo(e.target.getAttribute("data-id"))
-        }
-        
-    })
-  
-    addProject.addEventListener('click',()=>{
-        addProjectContainer.classList.add('hide');
-        addProjectModal.classList.remove('hide');
-    })
-  
-})()
-const main = document.getElementById("main");
-const projectInfoContainer = document.getElementById("project-info-container");
-const editProjectInfoContainer = document.getElementById("edit-project-info-container");
 
-main.addEventListener("click",(e) => {
-    if(e.target.id == "project-edit-icon"){
-        projectInfoContainer.classList.add("hide");
-        editProjectInfoContainer.classList.remove("hide");
+const btn = document.querySelector('.menu-btn');
+const aside = document.querySelector('#aside');
+const overlay = document.querySelector('#overlay');
+let menuOpen = false;
+
+
+btn.addEventListener('click',toggle)
+
+newProject.addProjectBtn.addEventListener('click', newProject.show);
+newProject.addProjectSubmitButton.addEventListener('click', newProject.addProject);
+newProject.addProjectCancelButton.addEventListener('click', newProject.hide);
+
+editHeading.editProjectInfoIcon.addEventListener('click', editHeading.show);
+editHeading.editProjectSubmitButton.addEventListener('click', editHeading.submit);
+editHeading.editProjectCancelButton.addEventListener('click', editHeading.hide);
+
+newTask.addTaskButton.addEventListener('click', newTask.show);
+newTask.addTaskCancelButton.addEventListener('click', newTask.hide);
+newTask.addTaskSubmitButton.addEventListener('click', newTask.submit);
+
+function toggle() {
+    !menuOpen ? open() : close();
+
+    function open() {
+        btn.classList.add('open');
+        aside.classList.add('show');
+        overlay.classList.add('show');
+        menuOpen = true;
     }
-    if(e.target.id == 'edit-project-cancel-button'){
-        editProjectInfoContainer.classList.add("hide");
-        projectInfoContainer.classList.remove("hide");
+
+    function close() {
+        btn.classList.remove('open');
+        aside.classList.remove('show');
+        overlay.classList.remove('show');
+        menuOpen = false;
     }
-})
-
-
-export default events
+}
