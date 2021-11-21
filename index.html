@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <header id="header">
+        <div class="menu-btn">
+            <div class="menu-btn-burger"></div>
+        </div>
+        <p>My Todo</p>
+    </header>
+    <aside id="aside">
+        <div id="project-panel">
+            <h3 id="project-header">Projects</h3>
+            <div class="divider"></div>
+            <div  id ="project-container" class="project-container"></div>
+            <div id="add-project-modal" class="hide">
+                <label class="add-project-label" for="project-name-input">Project Name</label>
+                <input class="add-project-input" id="project-name-input" type="text" placeholder="Name of Project/Task" required> 
+                <label class="add-project-label" for="project-description-input">Project Description</label> 
+                <textarea class="add-project-input" id="project-description-input" type="text" placeholder="Description of Project/Task"></textarea>
+                <div id="add-project-button-container">
+                    <button id="add-project-submit-button" class="add-project-submit-button">Submit</button>
+                    <button id="add-project-cancel-button" class="add-project-cancel-button">Cancel</button>
+                </div>
+            </div>
+            <div id="add-project-container" class="add-project-container">
+                <div id="add-project-button" class="add-project-button">
+                    <span id="plus-icon">+</span>
+                    <p id="add-project-text">Add Project</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main id="main">
+        <div id="project-info-container" class="project-info-container">
+            <div id="project-info" class="project-info">
+                <h2 id="project-name"></h2>
+                <h4 id="project-description"></h4>
+            </div>
+            <div id="edit-project-info-icon">
+                <img src="assets/images/edit.svg" alt="edit" id="project-edit-icon">
+            </div>
+        </div>
+        <div id="edit-project-info-container" class="edit-project-info-container hide">
+            <input class="edit-project-details" id="edit-project-name-input" type="text" placeholder="Name of Project"> 
+            <input class="edit-project-details" id="edit-project-description-input" type="text" placeholder="Description of Project" >
+            <div id="edit-project-button-container">
+                <button id="edit-project-submit-button">Submit</button>
+                <button id="edit-project-cancel-button">Cancel</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div id="tasks-container" class="tasks-container"></div>
+        <div id= 'add-task-modal' class="add-task-modal hide">
+            <div class="add-task-left">
+                <input id="add-task-name-input" class="add-task-name-input" type="text" placeholder="Task Name">
+            </div>
+            <div class="add-task-right">
+                <input id="add-task-date-input" class="add-task-date-input" type="date">
+                <div class="add-task-button-container">
+                    <p id="add-task-submit-button" class="add-task-submit-button">Submit</p>
+                    <p id="add-task-cancel-button" class="add-task-cancel-button">Cancel</p>
+                </div>
+            </div>
+        </div>
+        <div id="add-task-container" class="add-task-container">
+            <div id="add-task-button" class="add-task-button">
+                <span id="plus-icon">+</span>
+                <p id="add-task-text">Add Task</p>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Copyright © 2021 AminuMado</p>
+        <a href="https://github.com/AminuMado" target="_blank">
+        <img src="assets/images/github-logo.svg" class="github-logo"></a>
+    </footer>
+    <div id="overlay"></div>
+<script defer src="main.js"></script></body>
+</html>
